@@ -1,6 +1,6 @@
 import { count } from "console";
 
-export const getParagraphCount = (text: string): number => {
+export const getParagraphsTotal = (text: string): number => {
   const trimmedParagraph = text.replaceAll(" ", "");
 
   const paragraphs = trimmedParagraph.split("\n\n");

@@ -7,7 +7,7 @@ import {
   test6,
   test7,
   test8,
-} from "./countParagraphs.js";
+} from "./getParagraphsTotal.js";
 
 test1();
 test2();
