@@ -14,8 +14,20 @@ export const getParagraphsTotal = (text: string): number => {
 
 export const getWordsTotal = (text: string): number => {
   const trimmedWords = text.replaceAll("\n", " ");
+
   const words = trimmedWords.split(" ");
 
   const filteredWords = words.filter((word) => word !== "" && word !== "\n");
+
   return filteredWords.length;
+};
+
+export const getCharactersTotal = (text: string): number => {
+  const characters = text.split("");
+
+  const filteredCharacters = characters.filter(
+    (character) => character !== " " && character !== "\n"
+  );
+
+  return filteredCharacters.length;
 };
