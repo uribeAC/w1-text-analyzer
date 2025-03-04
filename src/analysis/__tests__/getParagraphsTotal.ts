@@ -1,13 +1,24 @@
 import { getParagraphsTotal } from "../index.js";
 
+export const getParagraphsTotalTests = (): void => {
+  test1();
+  test2();
+  test3();
+  test4();
+  test5();
+  test6();
+  test7();
+  test8();
+};
+
 export const test1 = (): void => {
-  const paragraph = "Hola buenos dias me llamo Alex";
+  const paragraphs = "Hola buenos dias me llamo Alex";
   const expectedResult = 1;
 
-  console.log(`Input: "${paragraph}"`);
+  console.log(`Input: "${paragraphs}"`);
   console.log(`Expected Result: "${expectedResult}"`);
 
-  if (getParagraphsTotal(paragraph) === expectedResult) {
+  if (getParagraphsTotal(paragraphs) === expectedResult) {
     console.log("Test 🆗\n");
   } else {
     console.log("Text ❌\n");
@@ -15,14 +26,14 @@ export const test1 = (): void => {
 };
 
 export const test2 = (): void => {
-  const paragraph = `Hola buenos dias me llamo Alex.
+  const paragraphs = `Hola buenos dias me llamo Alex.
   Encantado de venir`;
   const expectedResult = 1;
 
-  console.log(`Input: "${paragraph}"`);
+  console.log(`Input: "${paragraphs}"`);
   console.log(`Expected Result: "${expectedResult}"`);
 
-  if (getParagraphsTotal(paragraph) === expectedResult) {
+  if (getParagraphsTotal(paragraphs) === expectedResult) {
     console.log("Test 🆗\n");
   } else {
     console.log("Text ❌\n");
@@ -30,15 +41,15 @@ export const test2 = (): void => {
 };
 
 export const test3 = (): void => {
-  const paragraph = `Hola buenos dias me llamo Alex.
+  const paragraphs = `Hola buenos dias me llamo Alex.
        
       Encantado de venir`;
   const expectedResult = 2;
 
-  console.log(`Input: "${paragraph}"`);
+  console.log(`Input: "${paragraphs}"`);
   console.log(`Expected Result: "${expectedResult}"`);
 
-  if (getParagraphsTotal(paragraph) === expectedResult) {
+  if (getParagraphsTotal(paragraphs) === expectedResult) {
     console.log("Test 🆗\n");
   } else {
     console.log("Text ❌\n");
@@ -46,13 +57,13 @@ export const test3 = (): void => {
 };
 
 export const test4 = (): void => {
-  const paragraph = "";
+  const paragraphs = "";
   const expectedResult = 0;
 
-  console.log(`Input: "${paragraph}"`);
+  console.log(`Input: "${paragraphs}"`);
   console.log(`Expected Result: "${expectedResult}"`);
 
-  if (getParagraphsTotal(paragraph) === expectedResult) {
+  if (getParagraphsTotal(paragraphs) === expectedResult) {
     console.log("Test 🆗\n");
   } else {
     console.log("Text ❌\n");
@@ -60,13 +71,13 @@ export const test4 = (): void => {
 };
 
 export const test5 = (): void => {
-  const paragraph = " ";
+  const paragraphs = " ";
   const expectedResult = 0;
 
-  console.log(`Input: "${paragraph}"`);
+  console.log(`Input: "${paragraphs}"`);
   console.log(`Expected Result: "${expectedResult}"`);
 
-  if (getParagraphsTotal(paragraph) === expectedResult) {
+  if (getParagraphsTotal(paragraphs) === expectedResult) {
     console.log("Test 🆗\n");
   } else {
     console.log("Text ❌\n");
@@ -74,14 +85,14 @@ export const test5 = (): void => {
 };
 
 export const test6 = (): void => {
-  const paragraph = `
+  const paragraphs = `
   `;
   const expectedResult = 0;
 
-  console.log(`Input: "${paragraph}"`);
+  console.log(`Input: "${paragraphs}"`);
   console.log(`Expected Result: "${expectedResult}"`);
 
-  if (getParagraphsTotal(paragraph) === expectedResult) {
+  if (getParagraphsTotal(paragraphs) === expectedResult) {
     console.log("Test 🆗\n");
   } else {
     console.log("Text ❌\n");
@@ -89,14 +100,14 @@ export const test6 = (): void => {
 };
 
 export const test7 = (): void => {
-  const paragraph = `Hola
+  const paragraphs = `Hola
   `;
   const expectedResult = 1;
 
-  console.log(`Input: "${paragraph}"`);
+  console.log(`Input: "${paragraphs}"`);
   console.log(`Expected Result: "${expectedResult}"`);
 
-  if (getParagraphsTotal(paragraph) === expectedResult) {
+  if (getParagraphsTotal(paragraphs) === expectedResult) {
     console.log("Test 🆗\n");
   } else {
     console.log("Text ❌\n");
@@ -104,15 +115,15 @@ export const test7 = (): void => {
 };
 
 export const test8 = (): void => {
-  const paragraph = `Hola
+  const paragraphs = `Hola
   
   `;
   const expectedResult = 1;
 
-  console.log(`Input: "${paragraph}"`);
+  console.log(`Input: "${paragraphs}"`);
   console.log(`Expected Result: "${expectedResult}"`);
 
-  if (getParagraphsTotal(paragraph) === expectedResult) {
+  if (getParagraphsTotal(paragraphs) === expectedResult) {
     console.log("Test 🆗\n");
   } else {
     console.log("Text ❌\n");

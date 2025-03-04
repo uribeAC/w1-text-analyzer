@@ -11,3 +11,10 @@ export const getParagraphsTotal = (text: string): number => {
 
   return filteredParagraphs.length;
 };
+
+export const getWordsTotal = (text: string): number => {
+  const words = text.split(" ");
+
+  const filteredWords = words.filter((word) => word !== "" && word !== "\n");
+  return filteredWords.length;
+};
