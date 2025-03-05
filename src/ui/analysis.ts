@@ -5,6 +5,7 @@ import {
   getShortWordsTotal,
   getShortWordsList,
   getWordFrequency,
+  getReverseWordsText,
 } from "../analysis/index.js";
 
 const totalsContainer = document.querySelector(".totals");
@@ -143,4 +144,5 @@ export const analyzeText = (text: string): void => {
         .filter((word) => word.length <= 4)
     )
   );
+  renderReversedWords(getReverseWordsText(text));
 };
