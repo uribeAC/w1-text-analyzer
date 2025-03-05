@@ -32,14 +32,14 @@ export const getCharactersTotal = (text: string): number => {
   return filteredCharacters.length;
 };
 
-export const getShortWordsTotal = (text: string): number => {
+export const getShortWordsTotal = (text: string, maxLength = 4): number => {
   const trimmedWords = text.replaceAll("\n", " ");
 
   const words = trimmedWords.split(" ");
 
   const filteredWords = words.filter((word) => word !== "" && word !== "\n");
 
-  const shortWords = filteredWords.filter((word) => word.length <= 4);
+  const shortWords = filteredWords.filter((word) => word.length <= maxLength);
 
   return shortWords.length;
 };
