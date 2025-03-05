@@ -47,3 +47,18 @@ export const getShortWordsList = (words: string[]): string => {
   const wordsList = trimmedWords.join(", ");
   return wordsList;
 };
+
+export const getWordFrequency = (text: string, word: string): number => {
+  const lowerCaseText = text.toLowerCase();
+  const lowerCaseWord = word.toLowerCase();
+
+  const trimmedWords = lowerCaseText.replaceAll("\n", " ");
+
+  const words = trimmedWords.split(" ");
+
+  const filteredWords = words
+    .filter((word) => word.includes(lowerCaseWord))
+    .filter((word) => lowerCaseWord.length <= word.length + 1);
+
+  return filteredWords.length;
+};
