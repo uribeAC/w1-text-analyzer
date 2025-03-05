@@ -2,6 +2,7 @@ import {
   getParagraphsTotal,
   getWordsTotal,
   getCharactersTotal,
+  getShortWordsTotal,
 } from "../analysis/index.js";
 
 const totalsContainer = document.querySelector(".totals");
@@ -130,4 +131,5 @@ export const analyzeText = (text: string): void => {
   renderParagraphsTotal(getParagraphsTotal(text));
   renderWordsTotal(getWordsTotal(text));
   renderCharactersTotal(getCharactersTotal(text));
+  renderShortWordsTotal(getShortWordsTotal(text));
 };
