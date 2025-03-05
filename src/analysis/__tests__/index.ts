@@ -3,9 +3,11 @@ import { getWordsTotalTests } from "./getWordsTotal.js";
 import { getCharactersTotalTests } from "./getCharactersTotal.js";
 import { getShortWordsTotalTests } from "./getShortWordsTotal.js";
 import { getShortWordsListTests } from "./getShortWordsList.js";
+import { getWordFrequencyTests } from "./getWordFrequency.js";
 
 getParagraphsTotalTests();
 getWordsTotalTests();
 getCharactersTotalTests();
 getShortWordsTotalTests();
 getShortWordsListTests();
+getWordFrequencyTests();
