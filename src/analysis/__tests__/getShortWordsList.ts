@@ -75,5 +75,3 @@ export const test4 = (): void => {
     console.log("Text ❌\n");
   }
 };
-
-//console.log(["", " ", ""]); // ""
