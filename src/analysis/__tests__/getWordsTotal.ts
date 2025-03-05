@@ -1,6 +1,7 @@
 import { getWordsTotal } from "../index.js";
 
-export const getWorldsTotalTests = (): void => {
+export const getWordsTotalTests = (): void => {
+  console.log("\n\n➡️  Test: getWordsTotal\n");
   test1();
   test2();
   test3();
@@ -9,13 +10,16 @@ export const getWorldsTotalTests = (): void => {
 };
 export const test1 = (): void => {
   const text = "Hola buenos dias";
-  const expectedResult = 3;
+  const expectedWordsTotal = 3;
+  const actualWordsTotal = getWordsTotal(text);
 
-  console.log(`Input: "${text}"`);
-  console.log(`Expected Result: "${expectedResult}"`);
+  console.log(`Test 1: Input: "${text}"`);
+  console.log(
+    `Expected Words Total: "${expectedWordsTotal}" | Result: "${actualWordsTotal}"`
+  );
 
-  if (getWordsTotal(text) === expectedResult) {
-    console.log("Test 🆗\n");
+  if (actualWordsTotal === expectedWordsTotal) {
+    console.log("Test ✅\n");
   } else {
     console.log("Text ❌\n");
   }
@@ -25,13 +29,16 @@ export const test2 = (): void => {
   const text = `Hola buenos
   dias
   `;
-  const expectedResult = 3;
+  const expectedWordsTotal = 3;
+  const actualWordsTotal = getWordsTotal(text);
 
-  console.log(`Input: "${text}"`);
-  console.log(`Expected Result: "${expectedResult}"`);
+  console.log(`Test 2: Input: "${text}"`);
+  console.log(
+    `Expected Words Total: "${expectedWordsTotal}" | Result: "${actualWordsTotal}"`
+  );
 
-  if (getWordsTotal(text) === expectedResult) {
-    console.log("Test 🆗\n");
+  if (actualWordsTotal === expectedWordsTotal) {
+    console.log("Test ✅\n");
   } else {
     console.log("Text ❌\n");
   }
@@ -41,13 +48,16 @@ export const test3 = (): void => {
   const text = `Hola
     
     Buenos    Dias,     `;
-  const expectedResult = 3;
+  const expectedWordsTotal = 3;
+  const actualWordsTotal = getWordsTotal(text);
 
-  console.log(`Input: "${text}"`);
-  console.log(`Expected Result: "${expectedResult}"`);
+  console.log(`Test 3: Input: "${text}"`);
+  console.log(
+    `Expected Words Total: "${expectedWordsTotal}" | Result: "${actualWordsTotal}"`
+  );
 
-  if (getWordsTotal(text) === expectedResult) {
-    console.log("Test 🆗\n");
+  if (actualWordsTotal === expectedWordsTotal) {
+    console.log("Test ✅\n");
   } else {
     console.log("Text ❌\n");
   }
@@ -55,13 +65,16 @@ export const test3 = (): void => {
 
 export const test4 = (): void => {
   const text = "";
-  const expectedResult = 0;
+  const expectedWordsTotal = 0;
+  const actualWordsTotal = getWordsTotal(text);
 
-  console.log(`Input: "${text}"`);
-  console.log(`Expected Result: "${expectedResult}"`);
+  console.log(`Test 4: Input: "${text}"`);
+  console.log(
+    `Expected Words Total: "${expectedWordsTotal}" | Result: "${actualWordsTotal}"`
+  );
 
-  if (getWordsTotal(text) === expectedResult) {
-    console.log("Test 🆗\n");
+  if (actualWordsTotal === expectedWordsTotal) {
+    console.log("Test ✅\n");
   } else {
     console.log("Text ❌\n");
   }
@@ -69,13 +82,16 @@ export const test4 = (): void => {
 
 export const test5 = (): void => {
   const text = " ";
-  const expectedResult = 0;
+  const expectedWordsTotal = 0;
+  const actualWordsTotal = getWordsTotal(text);
 
-  console.log(`Input: "${text}"`);
-  console.log(`Expected Result: "${expectedResult}"`);
+  console.log(`Test 5: Input: "${text}"`);
+  console.log(
+    `Expected Words Total: "${expectedWordsTotal}" | Result: "${actualWordsTotal}"`
+  );
 
-  if (getWordsTotal(text) === expectedResult) {
-    console.log("Test 🆗\n");
+  if (actualWordsTotal === expectedWordsTotal) {
+    console.log("Test ✅\n");
   } else {
     console.log("Text ❌\n");
   }

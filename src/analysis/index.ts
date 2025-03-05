@@ -43,3 +43,7 @@ export const getShortWordsTotal = (text: string): number => {
 
   return shortWords.length;
 };
+
+export const getShortWordsList = (words: string[]): string => {
+  return "a";
+};

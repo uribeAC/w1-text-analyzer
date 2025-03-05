@@ -1,6 +1,7 @@
 import { getShortWordsTotal } from "../index.js";
 
 export const getShortWordsTotalTests = (): void => {
+  console.log("\n\n➡️  Test: getShortWordsTotal\n");
   test1();
   test2();
   test3();
@@ -11,12 +12,15 @@ export const getShortWordsTotalTests = (): void => {
 
 export const test1 = (): void => {
   const text = "Hola";
-  const expectedResult = 1;
+  const expectedShortWordsTotal = 1;
+  const actualShortWordsTotal = getShortWordsTotal(text);
 
-  console.log(`Input: "${text}"`);
-  console.log(`Expected Result: "${expectedResult}"`);
+  console.log(`Test 1: Input: "${text}"`);
+  console.log(
+    `Expected Short Words Total: "${expectedShortWordsTotal}" | Result: "${actualShortWordsTotal}"`
+  );
 
-  if (getShortWordsTotal(text) === expectedResult) {
+  if (actualShortWordsTotal === expectedShortWordsTotal) {
     console.log("Test ✅\n");
   } else {
     console.log("Text ❌\n");
@@ -25,12 +29,15 @@ export const test1 = (): void => {
 
 export const test2 = (): void => {
   const text = "Hola H Buenos Dias, Jacinto";
-  const expectedResult = 2;
+  const expectedShortWordsTotal = 2;
+  const actualShortWordsTotal = getShortWordsTotal(text);
 
-  console.log(`Input: "${text}"`);
-  console.log(`Expected Result: "${expectedResult}"`);
+  console.log(`Test 2: Input: "${text}"`);
+  console.log(
+    `Expected Short Words Total: "${expectedShortWordsTotal}" | Result: "${actualShortWordsTotal}"`
+  );
 
-  if (getShortWordsTotal(text) === expectedResult) {
+  if (actualShortWordsTotal === expectedShortWordsTotal) {
     console.log("Test ✅\n");
   } else {
     console.log("Text ❌\n");
@@ -39,12 +46,15 @@ export const test2 = (): void => {
 
 export const test3 = (): void => {
   const text = "    Hola   Alex Adios";
-  const expectedResult = 2;
+  const expectedShortWordsTotal = 2;
+  const actualShortWordsTotal = getShortWordsTotal(text);
 
-  console.log(`Input: "${text}"`);
-  console.log(`Expected Result: "${expectedResult}"`);
+  console.log(`Test 3: Input: "${text}"`);
+  console.log(
+    `Expected Short Words Total: "${expectedShortWordsTotal}" | Result: "${actualShortWordsTotal}"`
+  );
 
-  if (getShortWordsTotal(text) === expectedResult) {
+  if (actualShortWordsTotal === expectedShortWordsTotal) {
     console.log("Test ✅\n");
   } else {
     console.log("Text ❌\n");
@@ -54,12 +64,15 @@ export const test3 = (): void => {
 export const test4 = (): void => {
   const text = `    Hola Adios
      Alex`;
-  const expectedResult = 2;
+  const expectedShortWordsTotal = 2;
+  const actualShortWordsTotal = getShortWordsTotal(text);
 
-  console.log(`Input: "${text}"`);
-  console.log(`Expected Result: "${expectedResult}"`);
+  console.log(`Test 4: Input: "${text}"`);
+  console.log(
+    `Expected Short Words Total: "${expectedShortWordsTotal}" | Result: "${actualShortWordsTotal}"`
+  );
 
-  if (getShortWordsTotal(text) === expectedResult) {
+  if (actualShortWordsTotal === expectedShortWordsTotal) {
     console.log("Test ✅\n");
   } else {
     console.log("Text ❌\n");
@@ -68,12 +81,15 @@ export const test4 = (): void => {
 
 export const test5 = (): void => {
   const text = "";
-  const expectedResult = 0;
+  const expectedShortWordsTotal = 0;
+  const actualShortWordsTotal = getShortWordsTotal(text);
 
-  console.log(`Input: "${text}"`);
-  console.log(`Expected Result: "${expectedResult}"`);
+  console.log(`Test 5: Input: "${text}"`);
+  console.log(
+    `Expected Short Words Total: "${expectedShortWordsTotal}" | Result: "${actualShortWordsTotal}"`
+  );
 
-  if (getShortWordsTotal(text) === expectedResult) {
+  if (actualShortWordsTotal === expectedShortWordsTotal) {
     console.log("Test ✅\n");
   } else {
     console.log("Text ❌\n");
@@ -82,12 +98,15 @@ export const test5 = (): void => {
 
 export const test6 = (): void => {
   const text = " ";
-  const expectedResult = 0;
+  const expectedShortWordsTotal = 0;
+  const actualShortWordsTotal = getShortWordsTotal(text);
 
-  console.log(`Input: "${text}"`);
-  console.log(`Expected Result: "${expectedResult}"`);
+  console.log(`Test 6: Input: "${text}"`);
+  console.log(
+    `Expected Short Words Total: "${expectedShortWordsTotal}" | Result: "${actualShortWordsTotal}"`
+  );
 
-  if (getShortWordsTotal(text) === expectedResult) {
+  if (actualShortWordsTotal === expectedShortWordsTotal) {
     console.log("Test ✅\n");
   } else {
     console.log("Text ❌\n");
