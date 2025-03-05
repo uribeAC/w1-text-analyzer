@@ -63,3 +63,27 @@ export const getWordFrequency = (text: string, word: string): number => {
 
   return filteredWords.length;
 };
+
+export const getReverseWordsText = (text: string): string => {
+  if (text.replaceAll(" ", "") === "") {
+    return "";
+  }
+
+  const paragraphs = text.split("\n");
+
+  const paragraphsWords = paragraphs.map((paragraph) => {
+    const words = paragraph.split(" ");
+
+    const reversedWords = words.map((word) =>
+      word.split("").reverse().join("")
+    );
+
+    const reversedText = reversedWords.join(" ");
+
+    return reversedText;
+  });
+
+  const joinedParagraphs = paragraphsWords.join("\n");
+
+  return joinedParagraphs;
+};
