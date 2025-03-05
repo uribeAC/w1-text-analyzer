@@ -45,5 +45,7 @@ export const getShortWordsTotal = (text: string, maxLength = 4): number => {
 };
 
 export const getShortWordsList = (words: string[]): string => {
-  return "a";
+  const trimmedWords = words.filter((word) => word !== "" && word !== " ");
+  const wordsList = trimmedWords.join(", ");
+  return wordsList;
 };
