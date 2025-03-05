@@ -40,7 +40,7 @@ export const test2 = (): void => {
 export const test3 = (): void => {
   const text = `Hola
     
-    Buenos    Dias     `;
+    Buenos    Dias,     `;
   const expectedResult = 3;
 
   console.log(`Input: "${text}"`);

@@ -24,8 +24,8 @@ export const test1 = (): void => {
 };
 
 export const test2 = (): void => {
-  const text = "Buenos dias";
-  const expectedResult = 10;
+  const text = "Buenos dias !";
+  const expectedResult = 11;
 
   console.log(`Input: "${text}"`);
   console.log(`Expected Result: "${expectedResult}"`);
@@ -52,8 +52,8 @@ export const test3 = (): void => {
 };
 
 export const test4 = (): void => {
-  const text = "Buenos   \ndias";
-  const expectedResult = 10;
+  const text = "Buenos   \ndias!";
+  const expectedResult = 11;
 
   console.log(`Input: "${text}"`);
   console.log(`Expected Result: "${expectedResult}"`);

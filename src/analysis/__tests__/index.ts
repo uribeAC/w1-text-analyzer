@@ -3,5 +3,5 @@ import { getWorldsTotalTests } from "./getWordsTotal.js";
 import { getCharactersTotalTests } from "./getCharactersTotal.js";
 
 //getParagraphsTotalTests();
-//getWorldsTotalTests();
-getCharactersTotalTests();
+getWorldsTotalTests();
+//getCharactersTotalTests();
