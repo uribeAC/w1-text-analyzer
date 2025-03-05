@@ -54,11 +54,12 @@ export const getWordFrequency = (text: string, word: string): number => {
 
   const trimmedWords = lowerCaseText.replaceAll("\n", " ");
 
-  const words = trimmedWords.split(" ");
+  const textWords = trimmedWords.split(" ");
 
-  const filteredWords = words
-    .filter((word) => word.includes(lowerCaseWord))
-    .filter((word) => lowerCaseWord.length <= word.length + 1);
+  const filteredWords = textWords.filter(
+    (textWord) =>
+      textWord.includes(lowerCaseWord) && textWord.length <= word.length + 1
+  );
 
   return filteredWords.length;
 };
