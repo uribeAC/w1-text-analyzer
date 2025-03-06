@@ -7,6 +7,7 @@ import {
   getWordFrequency,
   getReverseWordsText,
   getForbiddenWordsText,
+  getCamelCaseText,
 } from "../analysis/index.js";
 
 const totalsContainer = document.querySelector(".totals");
@@ -147,4 +148,5 @@ export const analyzeText = (text: string): void => {
     )
   );
   renderReversedWords(getReverseWordsText(text));
+  renderCamelCase(getCamelCaseText(text));
 };

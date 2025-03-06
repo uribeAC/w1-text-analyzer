@@ -119,6 +119,10 @@ export const getForbiddenWordsText = (
 };
 
 export const getCamelCaseText = (text: string): string => {
+  if (text.replaceAll(" ", "") === "") {
+    return "";
+  }
+
   const words = text.replaceAll("\n", " ").split(" ");
   const filteredWords = words.filter((word) => word !== " ");
 

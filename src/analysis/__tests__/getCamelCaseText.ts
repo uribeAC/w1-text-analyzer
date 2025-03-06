@@ -5,6 +5,7 @@ export const getCamelCaseTextTests = (): void => {
   test1();
   test2();
   test3();
+  test4();
 };
 
 export const test1 = (): void => {
@@ -48,6 +49,23 @@ export const test3 = (): void => {
   const actualCamelCaseText = getCamelCaseText(text);
 
   console.log(`Test 3: Input: "${text}"`);
+  console.log(
+    `Expected camelCase Text: "${expectedCamelCaseText}" | Result: "${actualCamelCaseText}"`
+  );
+
+  if (actualCamelCaseText === expectedCamelCaseText) {
+    console.log("Test ✅\n");
+  } else {
+    console.log("Text ❌\n");
+  }
+};
+
+export const test4 = (): void => {
+  const text = "   ";
+  const expectedCamelCaseText = "";
+  const actualCamelCaseText = getCamelCaseText(text);
+
+  console.log(`Test 4: Input: "${text}"`);
   console.log(
     `Expected camelCase Text: "${expectedCamelCaseText}" | Result: "${actualCamelCaseText}"`
   );
