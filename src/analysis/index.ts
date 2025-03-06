@@ -100,7 +100,7 @@ export const getForbiddenWordsText = (
     word.toLowerCase()
   );
 
-  const words = text.split(" ");
+  const words = text.replaceAll("\n", " ").split(" ");
 
   const asteriskText: string[] = words.map((word) => {
     if (
