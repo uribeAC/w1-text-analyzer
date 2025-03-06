@@ -5,6 +5,7 @@ import { getShortWordsTotalTests } from "./getShortWordsTotal.js";
 import { getShortWordsListTests } from "./getShortWordsList.js";
 import { getWordFrequencyTests } from "./getWordFrequency.js";
 import { getReverseWordsTextTests } from "./getReverseWordsText.js";
+import { getForbiddenWordsTextTests } from "./getForbiddenWordsText.js";
 
 getParagraphsTotalTests();
 getWordsTotalTests();
@@ -13,3 +14,4 @@ getShortWordsTotalTests();
 getShortWordsListTests();
 getWordFrequencyTests();
 getReverseWordsTextTests();
+getForbiddenWordsTextTests();
