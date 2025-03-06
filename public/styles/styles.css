@@ -10,6 +10,14 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+textarea {
+  padding: 15px;
+}
+
+.analysis__item {
+  margin-bottom: 10px;
+}
+
 textarea,
 input,
 button {
