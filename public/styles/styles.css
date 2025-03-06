@@ -12,6 +12,7 @@ body {
 
 textarea {
   padding: 15px;
+  border-radius: 12px;
 }
 
 .analysis__item {
@@ -99,6 +100,7 @@ ul {
 }
 
 .analysis__item {
+  border-radius: 12px;
   padding: 10px;
   border: 2px solid #333;
   background-color: beige;
