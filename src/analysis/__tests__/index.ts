@@ -6,6 +6,7 @@ import { getShortWordsListTests } from "./getShortWordsList.js";
 import { getWordFrequencyTests } from "./getWordFrequency.js";
 import { getReverseWordsTextTests } from "./getReverseWordsText.js";
 import { getForbiddenWordsTextTests } from "./getForbiddenWordsText.js";
+import { getCamelCaseTextTests } from "./getCamelCaseText.js";
 
 getParagraphsTotalTests();
 getWordsTotalTests();
@@ -15,3 +16,4 @@ getShortWordsListTests();
 getWordFrequencyTests();
 getReverseWordsTextTests();
 getForbiddenWordsTextTests();
+getCamelCaseTextTests();
