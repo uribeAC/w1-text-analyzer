@@ -117,3 +117,17 @@ export const getForbiddenWordsText = (
 
   return asteriskText.join(" ");
 };
+
+export const getCamelCaseText = (text: string): string => {
+  const words = text.replaceAll("\n", " ").split(" ");
+  const filteredWords = words.filter((word) => word !== " ");
+
+  const firstWord = filteredWords[0].toLowerCase();
+  const upperCaseWords = filteredWords
+    .splice(1)
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
+
+  const joinedUpperCaseWords = upperCaseWords.join("");
+
+  return firstWord + joinedUpperCaseWords;
+};
