@@ -87,3 +87,33 @@ export const getReverseWordsText = (text: string): string => {
 
   return joinedParagraphs;
 };
+
+export const getForbiddenWordsText = (
+  text: string,
+  forbiddenWords: string[]
+): string => {
+  if (text.replaceAll(" ", "") === "") {
+    return "";
+  }
+
+  const lowerCaseForbiddenWords = forbiddenWords.map((word) =>
+    word.toLowerCase()
+  );
+
+  const words = text.split(" ");
+
+  const asteriskText: string[] = words.map((word) => {
+    if (
+      lowerCaseForbiddenWords.some(
+        (forbiddenWord) => forbiddenWord === word.toLowerCase()
+      )
+    ) {
+      const asteriskWord = "*";
+      return asteriskWord;
+    } else {
+      return word;
+    }
+  });
+
+  return asteriskText.join(" ");
+};
