@@ -15,8 +15,8 @@ textarea {
   border-radius: 12px;
 }
 
-.analysis__item {
-  margin-bottom: 10px;
+.analysis {
+  gap: 10px;
 }
 
 textarea,
