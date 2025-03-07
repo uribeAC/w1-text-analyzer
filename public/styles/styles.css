@@ -59,6 +59,24 @@ ul {
   background-color: #666;
   color: #fff;
   padding: 5px 10px;
+  width: 320px;
+  display: flex;
+  flex-direction: row;
+  border: solid;
+  border-width: 1px;
+  border-color: black;
+  align-self: flex-end;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.75;
+    color: black;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
 }
 
 .container {
@@ -113,6 +131,7 @@ ul {
   display: flex;
   flex-direction: row;
   gap: 10px;
+
   input {
     width: 110px;
   }
