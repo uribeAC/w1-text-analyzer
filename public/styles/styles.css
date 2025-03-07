@@ -131,7 +131,7 @@ ul {
   border: 2px solid #333;
   background-color: beige;
 
-  h2 {
+  .analysis-titles {
     font-size: 20px;
   }
 }
