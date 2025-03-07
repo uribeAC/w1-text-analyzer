@@ -46,6 +46,15 @@ ul {
   padding: 0px;
   list-style: none;
 }
+
+.input-frequency {
+  &:focus {
+    background-color: darkgray;
+    color: white;
+    outline-color: blue;
+  }
+}
+
 .palindrome-link {
   color: inherit;
   margin-bottom: 5px;
