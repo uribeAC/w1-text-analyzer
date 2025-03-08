@@ -77,15 +77,6 @@ ul {
   color: rgb(255, 255, 255);
 }
 
-.palindrome-link {
-  color: inherit;
-  margin-bottom: 5px;
-
-  &:hover {
-    text-decoration: none;
-  }
-}
-
 .buttons {
   display: flex;
   justify-content: space-between;
@@ -95,7 +86,7 @@ ul {
   background-color: #666;
   color: #fff;
   padding: 5px 10px;
-  width: 290px;
+  width: 240px;
   border: solid;
   border-radius: 3px;
   border-width: 1px;
@@ -173,9 +164,7 @@ ul {
   }
 }
 
-.camel-case-text,
-.kebab-case-text,
-.snake-case-text {
+.camel-case-text {
   word-wrap: break-word;
 }
 
@@ -236,8 +225,4 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
-}
-
-.palindromes a {
-  display: block;
 }
