@@ -55,6 +55,8 @@ button {
 
 input {
   padding: 5px;
+  border-color: rgb(29, 74, 255);
+  border-radius: 5px;
 }
 
 h1 {
@@ -70,12 +72,9 @@ ul {
   list-style: none;
 }
 
-.input-frequency {
-  &:focus {
-    background-color: darkgray;
-    color: white;
-    outline-color: blue;
-  }
+.input-frequency:focus {
+  background-color: rgb(169, 169, 169);
+  color: rgb(255, 255, 255);
 }
 
 .palindrome-link {
@@ -95,15 +94,16 @@ ul {
   align-self: flex-end;
   border: solid;
   border-width: 1px;
-  border-color: black;
+  border-color: rgb(0, 0, 0);
   cursor: pointer;
 
   &:hover {
     background-color: rgba(255, 255, 255, 0);
-    color: black;
+    color: rgb(0, 0, 0);
   }
 
   &:disabled {
+    background-color: #666;
     opacity: 0.3;
     cursor: not-allowed;
   }
@@ -206,7 +206,7 @@ ul {
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
