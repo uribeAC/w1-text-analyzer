@@ -3,11 +3,12 @@ import {
   getWordsTotal,
   getCharactersTotal,
   getShortWordsTotal,
-  getShortWordsList,
+  getWordsList,
   getWordFrequency,
   getReverseWordsText,
   getForbiddenWordsText,
   getCamelCaseText,
+  getShortWords,
 } from "../analysis/index.js";
 
 const totalsContainer = document.querySelector(".totals");
@@ -105,15 +106,7 @@ export const analyzeText = (text: string): void => {
   renderWordsTotal(getWordsTotal(text));
   renderCharactersTotal(getCharactersTotal(text));
   renderShortWordsTotal(getShortWordsTotal(text));
-  renderShortWordsList(
-    getShortWordsList(
-      text
-        .replaceAll("\n", " ")
-        .split(" ")
-        .filter((word) => word !== "" && word !== "\n")
-        .filter((word) => word.length <= 4)
-    )
-  );
+  renderShortWordsList(getWordsList(getShortWords(text)));
   renderReversedWords(getReverseWordsText(text));
   renderCamelCase(getCamelCaseText(text));
 };

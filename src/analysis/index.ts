@@ -1,21 +1,26 @@
+const trimmedLineFeedText = (text: string): string => {
+  return text.replaceAll("\n", " ");
+};
+
+const filteredTexts = (texts: string[]): string[] => {
+  return texts.filter((word) => word !== " " && word !== "\n" && word !== "");
+};
+
 export const getParagraphsTotal = (text: string): number => {
   const trimmedParagraph = text.replaceAll(" ", "");
 
   const paragraphs = trimmedParagraph.split("\n\n");
 
-  const filteredParagraphs = paragraphs.filter(
-    (paragraph) => paragraph !== "" && paragraph !== "\n"
-  );
-
+  const filteredParagraphs = filteredTexts(paragraphs);
   return filteredParagraphs.length;
 };
 
 export const getWordsTotal = (text: string): number => {
-  const trimmedWords = text.replaceAll("\n", " ");
+  const trimmedWords = trimmedLineFeedText(text);
 
   const words = trimmedWords.split(" ");
 
-  const filteredWords = words.filter((word) => word !== "" && word !== "\n");
+  const filteredWords = filteredTexts(words);
 
   return filteredWords.length;
 };
@@ -23,27 +28,39 @@ export const getWordsTotal = (text: string): number => {
 export const getCharactersTotal = (text: string): number => {
   const characters = text.split("");
 
-  const filteredCharacters = characters.filter(
-    (character) => character !== " " && character !== "\n"
-  );
+  const filteredCharacters = filteredTexts(characters);
 
   return filteredCharacters.length;
 };
 
-export const getShortWordsTotal = (text: string, maxLength = 4): number => {
-  const trimmedWords = text.replaceAll("\n", " ");
+const shortWordMaxLength = 4;
+
+export const getShortWords = (
+  text: string,
+  maxLength = shortWordMaxLength
+): string[] => {
+  const trimmedWords = trimmedLineFeedText(text);
 
   const words = trimmedWords.split(" ");
 
-  const filteredWords = words.filter((word) => word !== "" && word !== "\n");
+  const filteredWords = filteredTexts(words);
 
   const shortWords = filteredWords.filter((word) => word.length <= maxLength);
+
+  return shortWords;
+};
+
+export const getShortWordsTotal = (
+  text: string,
+  maxLength = shortWordMaxLength
+): number => {
+  const shortWords = getShortWords(text, maxLength);
 
   return shortWords.length;
 };
 
-export const getShortWordsList = (words: string[]): string => {
-  const trimmedWords = words.filter((word) => word !== "" && word !== " ");
+export const getWordsList = (words: string[]): string => {
+  const trimmedWords = filteredTexts(words);
   const wordsList = trimmedWords.join(", ");
   return wordsList;
 };
@@ -52,7 +69,7 @@ export const getWordFrequency = (text: string, word: string): number => {
   const lowerCaseText = text.toLowerCase();
   const lowerCaseWord = word.toLowerCase();
 
-  const trimmedWords = lowerCaseText.replaceAll("\n", " ");
+  const trimmedWords = trimmedLineFeedText(lowerCaseText);
 
   const textWords = trimmedWords.split(" ");
 
@@ -100,7 +117,7 @@ export const getForbiddenWordsText = (
     word.toLowerCase()
   );
 
-  const words = text.replaceAll("\n", " ").split(" ");
+  const words = trimmedLineFeedText(text).split(" ");
 
   const asteriskText: string[] = words.map((word) => {
     if (
@@ -123,7 +140,7 @@ export const getCamelCaseText = (text: string): string => {
     return "";
   }
 
-  const words = text.replaceAll("\n", " ").split(" ");
+  const words = trimmedLineFeedText(text).split(" ");
   const filteredWords = words.filter((word) => word !== " ");
 
   const firstWord = filteredWords[0].toLowerCase();
