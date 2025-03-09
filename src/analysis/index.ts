@@ -75,7 +75,9 @@ export const getWordFrequency = (text: string, word: string): number => {
 
   const filteredWords = textWords.filter(
     (textWord) =>
-      textWord.includes(lowerCaseWord) && textWord.length <= word.length + 1
+      textWord.includes(lowerCaseWord) &&
+      textWord.length <= word.length + 1 &&
+      textWord !== ""
   );
 
   return filteredWords.length;
@@ -113,7 +115,8 @@ export const getForbiddenWordsText = (
     return "";
   }
 
-  const lowerCaseForbiddenWords = forbiddenWords.map((word) =>
+  const filteredForbiddenWords = filteredTexts(forbiddenWords);
+  const lowerCaseForbiddenWords = filteredForbiddenWords.map((word) =>
     word.toLowerCase()
   );
 
