@@ -17,7 +17,7 @@
       <label for="switch" class="switch">
         <input type="checkbox" id="switch">
         <span class="slider round"></span>
-      </label>
+        a</label>
     </header>
     <form class="form-text">
       <label for="text">Enter text:</label>
@@ -27,36 +27,36 @@
         <button class="button" type="reset">Empty Text</button>
       </div>
     </form>
-    <form>
-      <ul class="filters-list">
-        <li class="filter">
-          <label for="totals-check">Totals</label>
-          <input type="checkbox" id="totals-check" />
-        </li>
-        <li class="filter">
-          <label for="short-words-check">Short Words</label>
-          <input type="checkbox" id="short-words-check" />
-        </li>
-        <li class="filter">
-          <label for="frequencies-check">Frequencies</label>
-          <input type="checkbox" id="frequencies-check" />
-        </li>
-        <li class="filter">
-          <label for="reversed-words-check">Reversed Words</label>
-          <input type="checkbox" id="reversed-words-check" />
-        </li>
-        <li class="filter">
-          <label for="forbidden-words-check">Forbidden Words</label>
-          <input type="checkbox" id="forbidden-words-check" />
-        </li>
-        <li class="filter">
-          <label for="camel-case-check">Camel Case</label>
-          <input type="checkbox" id="camel-case-check" />
-        </li>
-      </ul>
-    </form>
     <div class="analysis">
-      <div class="analysis__item totals">
+      <form>
+        <ul class="filters-list">
+          <li class="filter" id="totals-checkbox">
+            <label for="totals-check">Totals</label>
+            <input type="checkbox" id="totals-check" name="totals-check" checked />
+          </li>
+          <li class="filter" id="short-checkbox">
+            <label for="short-words-check">Short Words</label>
+            <input type="checkbox" id="short-words-check" name="short-words-check" checked />
+          </li>
+          <li class="filter" id="frequencies-checkbox">
+            <label for="frequencies-check">Frequencies</label>
+            <input type="checkbox" id="frequencies-check" name="frequencies-check" checked />
+          </li>
+          <li class="filter" id="reversed-words-checkbox">
+            <label for="reversed-words-check">Reversed Words</label>
+            <input type="checkbox" id="reversed-words-check" name="reversed-words-check" checked />
+          </li>
+          <li class="filter" id="forbidden-words-checkbox">
+            <label for="forbidden-words-check">Forbidden Words</label>
+            <input type="checkbox" id="forbidden-words-check" name="forbidden-words-check" checked />
+          </li>
+          <li class="filter" id="camel-case-checkbox">
+            <label for="camel-case-check">Camel Case</label>
+            <input type="checkbox" id="camel-case-check" name="camel-case-check" checked />
+          </li>
+        </ul>
+      </form>
+      <div class="analysis__item totals" id="analysis-totals">
         <h2 class="analysis-title">Totals</h2>
         <ul>
           <li>Paragraphs: <span class="paragraphs-count"></span></li>
@@ -65,11 +65,11 @@
           <li>Short words: <span class="short-words-count"></span></li>
         </ul>
       </div>
-      <div class="analysis__item short">
+      <div class="analysis__item short" id="analysis-short">
         <h2 class="analysis-title">Short words</h2>
         <span class="short-words"></span>
       </div>
-      <div class="analysis__item frequencies">
+      <div class="analysis__item frequencies" id="analysis-frequencies">
         <h2 class="analysis-title">Frequencies</h2>
         <ul class="frequencies-list">
           <li class="frequency">
@@ -89,11 +89,11 @@
           </li>
         </ul>
       </div>
-      <div class="analysis__item reversed-words">
+      <div class="analysis__item reversed-words" id="analysis-reversed-words">
         <h2 class="analysis-title">Reversed words</h2>
         <span class="reversed-words-list"></span>
       </div>
-      <div class="analysis__item forbidden">
+      <div class="analysis__item forbidden" id="analysis-forbidden">
         <h2 class="analysis-title">Forbidden words</h2>
         <div>
           <label for="forbidden-words">Forbidden words:</label>
@@ -101,7 +101,7 @@
         </div>
         <span class="censured-text"></span>
       </div>
-      <div class="analysis__item camel-case">
+      <div class="analysis__item camel-case" id="analysis-camel-case">
         <h2 class="analysis-title">Camel case</h2>
         <span class="camel-case-text"></span>
       </div>
